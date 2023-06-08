@@ -1,2 +1,2 @@
-# the_weather
-A simple no fuss weather app.
+# TheWeather.py
+A simple command line weather app written in Python.
