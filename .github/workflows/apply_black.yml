@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Running black linter.
-        run:
+        run: |
           pip install black
           black .
       - name: Add & Commit
