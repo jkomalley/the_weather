@@ -1,8 +1,9 @@
 import requests
+
 # import json
 
 
-class TheWeather():
+class TheWeather:
     def __init__(self, latitude: float = 0.0, longitude: float = 0.0):
         """Initialize TheWeather module
         :param latitude:
@@ -49,7 +50,9 @@ class TheWeather():
         except requests.exceptions.JSONDecodeError as err:
             raise SystemExit(err)
 
-        detailed_forecast = response_json["properties"]["periods"][0]["detailedForecast"]
+        detailed_forecast = response_json["properties"]["periods"][0][
+            "detailedForecast"
+        ]
 
         return detailed_forecast
 
